@@ -1,12 +1,83 @@
 const memes = [
   {
     tag: 'hi',
-    words: ['hey', 'hi', 'hello'],
+    words: ['hey', 'hi', 'hello', 'hola'],
     images: [
       'https://s3.amazonaws.com/comedy-hackathon/images/hay.jpg',
       'https://s3.amazonaws.com/comedy-hackathon/images/hey-sexy.jpg',
     ],
   },
+
+  {
+    tag: 'sup',
+    words: ['what\'s up', 'sup', 'how\'s it going', 'how are you'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/whats-up.jpg',
+      'https://s3.amazonaws.com/comedy-hackathon/images/waddup-gangsta.jpg',
+      'https://s3.amazonaws.com/comedy-hackathon/images/waddup-doe.jpg'
+    ],
+  },
+
+  {
+    tag: 'whoa',
+    words: ['whoa', 'wow'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/cat-whoa.jpg',
+      'https://s3.amazonaws.com/comedy-hackathon/images/meep.jpg',
+    ],
+  },
+
+  {
+    tag: 'what',
+    words: ['what', 'huh'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/what.jpg',
+      'https://s3.amazonaws.com/comedy-hackathon/images/wait-what.jpg',
+    ],
+  },
+
+  {
+    tag: 'cool',
+    words: ['cool', 'sweet', 'awesome', 'yay'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/thats-whats-up.jpg',
+      'https://s3.amazonaws.com/comedy-hackathon/images/much-rejoice.jpg'
+    ],
+  },
+
+  {
+    tag: 'haha',
+    words: ['haha', 'lol'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/yao-funny.jpg',
+      'https://s3.amazonaws.com/comedy-hackathon/images/funny-austin.jpg',
+    ],
+  },
+
+  {
+    tag: 'lmao',
+    words: ['lmfao', 'rofl', 'lmao'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/gonna-pee.jpg',
+    ],
+  },
+
+  {
+    tag: 'okay',
+    words: ['okay', 'ok'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/alrighty-then.jpg',
+    ],
+  },
+
+  {
+    tag: 'k',
+    words: ['k'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/k-you',
+    ],
+  },
+
 ];
 
 const wordMappings = {};
