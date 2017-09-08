@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { GiftedChat } from 'react-native-gifted-chat';
 import Pusher from 'pusher-js/react-native';
 import CurrentUser from '../Services/CurrentUser';
+import Meme from '../Services/Meme';
 
 // Enable pusher logging - don't include this in production
 // Pusher.logToConsole = true;
@@ -53,30 +54,25 @@ class ChatScreen extends React.Component {
 
   componentWillMount() {
     this.setState({
-      messages: [
-        {
-          _id: 1,
-          createdAt: new Date(),
-          user: {
-            _id: 2,
-            name: 'React Native',
-          },
-          image: 'https://s3.amazonaws.com/comedy-hackathon/images/hay.jpg',
-        },
-        {
-          _id: 2,
-          createdAt: new Date(),
-          user: {
-            _id: 1,
-          },
-          image: 'https://s3.amazonaws.com/comedy-hackathon/images/hey-sexy.jpg',
-        },
-      ],
+      messages: [],
     });
   }
 
   onSend(messages = []) {
-    const message = messages[0];
+    const firstMessage = messages[0];
+    const memeImage = Meme.getMemeImageFromText(firstMessage.text);
+
+    if (!memeImage) {
+      return;
+    }
+
+    const message = {
+      _id: firstMessage._id, // eslint-disable-line
+      createdAt: firstMessage.createdAt,
+      user: firstMessage.user,
+      image: memeImage,
+    };
+
     channel.trigger(this.state.eventName, { message });
     this.setState(previousState => ({
       messages: GiftedChat.append(previousState.messages, message),
