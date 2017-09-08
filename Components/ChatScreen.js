@@ -40,8 +40,6 @@ class ChatScreen extends React.Component {
       eventName,
     };
 
-    console.log('this.state.eventName', this.state.eventName);
-
     channel.bind(this.state.eventName, (data) => {
       this.setState(previousState => ({
         messages: GiftedChat.append(previousState.messages, data.message),
@@ -77,7 +75,6 @@ class ChatScreen extends React.Component {
 
   onSend(messages = []) {
     const message = messages[0];
-    console.log('message', message);
     channel.trigger(this.state.eventName, { message });
     this.setState(previousState => ({
       messages: GiftedChat.append(previousState.messages, messages),
