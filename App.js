@@ -1,20 +1,8 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import Main from './Components/Main';
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+import MainScreen from './Components/MainScreen';
 
 const App = () => (
-  <View style={styles.container}>
-    <Main />
-  </View>
+  <MainScreen />
 );
 
 export default App;
