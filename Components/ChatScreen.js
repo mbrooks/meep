@@ -1,5 +1,18 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import { GiftedChat } from 'react-native-gifted-chat';
+import Pusher from 'pusher-js/react-native';
+import CurrentUser from '../Services/CurrentUser';
+
+// Enable pusher logging - don't include this in production
+// Pusher.logToConsole = true;
+
+const pusher = new Pusher('693d5443b7b47ad439da', {
+  cluster: 'us2',
+  encrypted: true,
+  authEndpoint: 'http://192.168.1.107:5000/pusher/auth',
+});
+
+const channel = pusher.subscribe('private-channel');
 
 class ChatScreen extends React.Component {
   static navigationOptions({ navigation }) {
@@ -10,13 +23,32 @@ class ChatScreen extends React.Component {
 
   constructor(props) {
     super(props);
+
+    const currentUserId = CurrentUser.get().id;
+    const user = props.navigation.state.params.user;
+    const userId = props.navigation.state.params.user.id;
+    let eventName;
+    if (currentUserId < userId) {
+      eventName = `client-message-${currentUserId}:${userId}`;
+    } else {
+      eventName = `client-message-${userId}:${currentUserId}`;
+    }
+
     this.state = {
       messages: [],
+      user,
+      eventName,
     };
 
-    this.navigationOptions = {
-      title: 'Chat with lucy',
-    };
+    console.log('this.state.eventName', this.state.eventName);
+
+    channel.bind(this.state.eventName, (data) => {
+      this.setState(previousState => ({
+        messages: GiftedChat.append(previousState.messages, data.message),
+      }));
+    });
+
+    this.onSend = this.onSend.bind(this);
   }
 
   componentWillMount() {
@@ -44,7 +76,9 @@ class ChatScreen extends React.Component {
   }
 
   onSend(messages = []) {
-    console.log('messages', messages);
+    const message = messages[0];
+    console.log('message', message);
+    channel.trigger(this.state.eventName, { message });
     this.setState(previousState => ({
       messages: GiftedChat.append(previousState.messages, messages),
     }));
@@ -64,5 +98,9 @@ class ChatScreen extends React.Component {
     );
   }
 }
+
+ChatScreen.propTypes = {
+  navigation: PropTypes.object.isRequired,
+};
 
 export default ChatScreen;
