@@ -24,7 +24,8 @@ class ChatScreen extends React.Component {
   constructor(props) {
     super(props);
 
-    const currentUserId = CurrentUser.get().id;
+    const currentUser = CurrentUser.get();
+    const currentUserId = currentUser.id;
     const user = props.navigation.state.params.user;
     const userId = props.navigation.state.params.user.id;
     let eventName;
@@ -35,6 +36,7 @@ class ChatScreen extends React.Component {
     }
 
     this.state = {
+      currentUser,
       messages: [],
       user,
       eventName,
@@ -77,7 +79,7 @@ class ChatScreen extends React.Component {
     const message = messages[0];
     channel.trigger(this.state.eventName, { message });
     this.setState(previousState => ({
-      messages: GiftedChat.append(previousState.messages, messages),
+      messages: GiftedChat.append(previousState.messages, message),
     }));
   }
 
@@ -89,7 +91,8 @@ class ChatScreen extends React.Component {
         renderTime={() => false}
         renderAvatar={() => false}
         user={{
-          _id: 1,
+          _id: this.state.currentUser.id,
+          name: this.state.currentUser.name,
         }}
       />
     );
