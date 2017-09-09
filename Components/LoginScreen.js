@@ -37,7 +37,8 @@ class LoginScreen extends React.Component {
       return;
     }
 
-    const currentUser = this.state.users.find(user => user.name === this.state.username);
+    const currentUser = this.state.users.find(user =>
+      user.name.toLowerCase() === this.state.username.toLowerCase());
 
     if (!currentUser) {
       return;
