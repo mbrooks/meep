@@ -20,15 +20,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    padding: 10,
     fontSize: 20,
     fontWeight: 'bold',
+  },
+  arrow: {
+    fontSize: 20,
+    color: 'grey',
   },
 });
 
 class HomeScreen extends React.Component {
   static get navigationOptions() {
-    return { title: 'Welcome' };
+    return { title: 'Contacts' };
   }
 
   constructor(props) {
@@ -54,11 +57,14 @@ class HomeScreen extends React.Component {
               onPress={() => navigate('Chat', { user })}
             >
               <View style={{ flex: 1, flexDirection: 'row' }}>
-                <View style={styles.circle} />
-                <View>
-                  <Text style={styles.text}>
-                    {user.name}
-                  </Text>
+                <View style={{ flex: 1 }}>
+                  <View style={styles.circle} />
+                </View>
+                <View style={{ flex: 8 }}>
+                  <Text style={styles.text}>{user.name}</Text>
+                </View>
+                <View style={{ flex: 1 }}>
+                  <Text style={styles.arrow}>&gt;</Text>
                 </View>
               </View>
             </TouchableHighlight>
