@@ -26,12 +26,19 @@ class LoginScreen extends React.Component {
       users: this.props.users,
       username: '',
       password: '',
+      attempts: 0,
     };
 
     this.handleLogin = this.handleLogin.bind(this);
   }
 
   handleLogin() {
+    if (this.state.attempts === 0) {
+      alert('Password Invalid');
+      this.setState({ attempts: this.state.attempts + 1 });
+      return;
+    }
+
     if (!this.state.password) {
       return;
     }
@@ -75,7 +82,6 @@ class LoginScreen extends React.Component {
             <TextInput
               style={styles.textInput}
               onChangeText={password => this.setState({ password })}
-              secureTextEntry
               value={this.state.password}
             />
           </View>

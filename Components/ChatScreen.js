@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Image } from 'react-native';
 import { GiftedChat } from 'react-native-gifted-chat';
 import Pusher from 'pusher-js/react-native';
 import CurrentUser from '../Services/CurrentUser';
@@ -86,6 +87,15 @@ class ChatScreen extends React.Component {
         onSend={messages => this.onSend(messages)}
         renderTime={() => false}
         renderAvatar={() => false}
+        renderBubble={(value) => {
+          return (
+            <Image
+              resizeMode={'contain'}
+              style={{ height: 250, width: 250 }}
+              source={{ uri: value.currentMessage.image }}
+            />
+          );
+        }}
         user={{
           _id: this.state.currentUser.id,
           name: this.state.currentUser.name,

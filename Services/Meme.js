@@ -10,7 +10,7 @@ const memes = [
 
   {
     tag: 'sup',
-    words: ['whats up', 'sup', 'hows it going', 'how are you'],
+    words: ['whats', 'sup'],
     images: [
       'https://s3.amazonaws.com/comedy-hackathon/images/whats-up.jpg',
       'https://s3.amazonaws.com/comedy-hackathon/images/waddup-gangsta.jpg',
