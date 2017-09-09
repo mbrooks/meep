@@ -5,12 +5,12 @@ import CurrentUser from '../Services/CurrentUser';
 import Meme from '../Services/Meme';
 
 // Enable pusher logging - don't include this in production
-// Pusher.logToConsole = true;
+Pusher.logToConsole = true;
 
 const pusher = new Pusher('693d5443b7b47ad439da', {
   cluster: 'us2',
   encrypted: true,
-  authEndpoint: 'http://10.0.3.84:5000/pusher/auth',
+  authEndpoint: 'http://54.158.115.21/pusher/auth',
 });
 
 const channel = pusher.subscribe('private-channel');
