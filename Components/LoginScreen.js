@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFF8DC',
   },
@@ -50,6 +49,7 @@ class LoginScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <View style={{ height: 50, width: 100 }} />
         <View>
           <Image
             resizeMode={'contain'}

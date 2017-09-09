@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { FlatList, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
+import { FlatList, Image, StyleSheet, Text, TouchableHighlight, View } from 'react-native';
 import User from '../Services/User';
 import CurrentUser from '../Services/CurrentUser';
 
@@ -30,10 +30,6 @@ const styles = StyleSheet.create({
 });
 
 class HomeScreen extends React.Component {
-  static get navigationOptions() {
-    return { title: 'Contacts' };
-  }
-
   constructor(props) {
     super(props);
 
@@ -74,6 +70,25 @@ class HomeScreen extends React.Component {
     );
   }
 }
+
+HomeScreen.navigationOptions = (props) => {
+  const { navigate } = props.navigation;
+  return {
+    title: 'Contacts',
+    headerLeft: (
+      <TouchableHighlight
+        onPress={() => navigate('Settings')}
+      >
+        <Image
+          resizeMode={'contain'}
+          style={{ width: 30, height: 30 }}
+          source={{ uri: 'https://s3.amazonaws.com/comedy-hackathon/images/Hamburger_icon.svg.png' }}
+          onPress={() => navigate('Settings')}
+        />
+      </TouchableHighlight>
+    ),
+  };
+};
 
 HomeScreen.propTypes = {
   navigation: PropTypes.object.isRequired,
