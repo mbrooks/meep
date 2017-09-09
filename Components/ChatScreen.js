@@ -10,7 +10,7 @@ import Meme from '../Services/Meme';
 const pusher = new Pusher('693d5443b7b47ad439da', {
   cluster: 'us2',
   encrypted: true,
-  authEndpoint: 'http://192.168.1.107:5000/pusher/auth',
+  authEndpoint: 'http://10.0.3.84:5000/pusher/auth',
 });
 
 const channel = pusher.subscribe('private-channel');

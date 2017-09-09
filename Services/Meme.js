@@ -10,17 +10,17 @@ const memes = [
 
   {
     tag: 'sup',
-    words: ['what\'s up', 'sup', 'how\'s it going', 'how are you'],
+    words: ['whats up', 'sup', 'hows it going', 'how are you'],
     images: [
       'https://s3.amazonaws.com/comedy-hackathon/images/whats-up.jpg',
       'https://s3.amazonaws.com/comedy-hackathon/images/waddup-gangsta.jpg',
-      'https://s3.amazonaws.com/comedy-hackathon/images/waddup-doe.jpg'
+      'https://s3.amazonaws.com/comedy-hackathon/images/waddup-doe.JPG',
     ],
   },
 
   {
     tag: 'whoa',
-    words: ['whoa', 'wow'],
+    words: ['whoa', 'wow', 'woah'],
     images: [
       'https://s3.amazonaws.com/comedy-hackathon/images/cat-whoa.jpg',
       'https://s3.amazonaws.com/comedy-hackathon/images/meep.jpg',
@@ -41,7 +41,7 @@ const memes = [
     words: ['cool', 'sweet', 'awesome', 'yay'],
     images: [
       'https://s3.amazonaws.com/comedy-hackathon/images/thats-whats-up.jpg',
-      'https://s3.amazonaws.com/comedy-hackathon/images/much-rejoice.jpg'
+      'https://s3.amazonaws.com/comedy-hackathon/images/much-rejoice.jpg',
     ],
   },
 
@@ -74,7 +74,7 @@ const memes = [
     tag: 'k',
     words: ['k'],
     images: [
-      'https://s3.amazonaws.com/comedy-hackathon/images/k-you',
+      'https://s3.amazonaws.com/comedy-hackathon/images/k-you.jpg',
     ],
   },
 
