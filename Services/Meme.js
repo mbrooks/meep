@@ -98,8 +98,8 @@ const MemeService = {
   },
 
   getMemeImageFromText(text) {
-    const words = text.toLowerCase().replace(/[^0-9a-z]/gi, '').split(' ');
-    const firstWord = words.find(word => wordMappings[word]);
+    const words = text.toLowerCase().replace(/[^0-9a-z\s]/gi, '').split(' ');
+    const firstWord = words.find(word => Object.keys(wordMappings).includes(word));
 
     if (!firstWord) {
       return null;
