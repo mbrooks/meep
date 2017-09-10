@@ -6,14 +6,17 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    backgroundColor: '#FFF8DC',
+  },
+  text: {
+    color: '#3C43D9',
   },
   textInput: {
     height: 40,
     width: 300,
-    borderColor: 'black',
+    borderColor: '#3C43D9',
     borderWidth: 1,
     backgroundColor: 'white',
+    color: '#3C43D9',
   },
 });
 
@@ -34,7 +37,7 @@ class LoginScreen extends React.Component {
 
   handleLogin() {
     if (this.state.attempts === 0) {
-      alert('Password Invalid');
+      alert('Password Invalid'); //eslint-disable-line
       this.setState({ attempts: this.state.attempts + 1 });
       return;
     }
@@ -56,17 +59,17 @@ class LoginScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={{ height: 50, width: 100 }} />
+        <View style={{ height: 10, width: 100 }} />
         <View>
           <Image
             resizeMode={'contain'}
-            style={{ width: 200, height: 200 }}
+            style={{ width: 275, height: 275 }}
             source={{ uri: 'https://s3.amazonaws.com/comedy-hackathon/images/meepLogo.jpg' }}
           />
         </View>
         <View>
           <View>
-            <Text>Username:</Text>
+            <Text style={styles.text}>Username:</Text>
           </View>
           <View>
             <TextInput
@@ -76,7 +79,7 @@ class LoginScreen extends React.Component {
             />
           </View>
           <View>
-            <Text>Password:</Text>
+            <Text style={styles.text}>Password:</Text>
           </View>
           <View>
             <TextInput

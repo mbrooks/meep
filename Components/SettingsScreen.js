@@ -16,13 +16,14 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 30,
     padding: 10,
+    color: '#3C43D9',
   },
   button: {
     width: 300,
     height: 50,
     borderWidth: 1,
     borderColor: 'grey',
-    backgroundColor: 'white',
+    backgroundColor: '#3C43D9',
     padding: 10,
     justifyContent: 'center',
     alignItems: 'center',
@@ -31,6 +32,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     justifyContent: 'center',
     alignItems: 'center',
+    color: 'white',
   },
 });
 
