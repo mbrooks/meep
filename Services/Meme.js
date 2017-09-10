@@ -78,6 +78,64 @@ const memes = [
     ],
   },
 
+  {
+    tag: 'bar',
+    words: ['bar', 'bars'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/meetMeAtTheBar.jpeg',
+      'https://s3.amazonaws.com/comedy-hackathon/images/meetMeAtTheBarbell.jpeg',
+    ],
+  },
+
+  {
+    tag: 'drink',
+    words: ['drink', 'drinks'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/DrinkWithMe.jpeg',
+    ],
+  },
+
+  {
+    tag: 'no',
+    words: ['no'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/hellToTheNo.jpeg',
+      'https://s3.amazonaws.com/comedy-hackathon/images/howAboutNo.jpeg',
+    ],
+  },
+
+  {
+    tag: 'beast',
+    words: ['beast'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/beethMode.jpg',
+    ],
+  },
+
+  {
+    tag: 'unicorn',
+    words: ['unicorn'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/unicorn.jpg',
+    ],
+  },
+
+  {
+    tag: 'nauseated',
+    words: ['nauseated'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/nauseated.png',
+    ],
+  },
+
+  {
+    tag: 'wine',
+    words: ['wine'],
+    images: [
+      'https://s3.amazonaws.com/comedy-hackathon/images/bottleOfWine.png',
+    ],
+  },
+
 ];
 
 const wordMappings = {};
