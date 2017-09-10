@@ -87,11 +87,11 @@ class ChatScreen extends React.Component {
         onSend={messages => this.onSend(messages)}
         renderTime={() => false}
         renderAvatar={() => false}
-        renderBubble={value => (
+        renderBubble={recievedMessage => (
           <Image
             resizeMode={'contain'}
             style={{ height: 250, width: 250 }}
-            source={{ uri: value.currentMessage.image }}
+            source={{ uri: recievedMessage.currentMessage.image }}
           />
         )}
         user={{

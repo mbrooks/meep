@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Button, Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, Image, StyleSheet, Text, TextInput, TouchableHighlight, View } from 'react-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -16,6 +16,19 @@ const styles = StyleSheet.create({
     borderColor: '#3C43D9',
     borderWidth: 1,
     backgroundColor: 'white',
+    color: '#3C43D9',
+  },
+  button: {
+    width: 300,
+    height: 50,
+    padding: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  buttonText: {
+    fontSize: 15,
+    justifyContent: 'center',
+    alignItems: 'center',
     color: '#3C43D9',
   },
 });
@@ -76,6 +89,7 @@ class LoginScreen extends React.Component {
               style={styles.textInput}
               onChangeText={username => this.setState({ username })}
               value={this.state.username}
+              autoCorrect={false}
             />
           </View>
           <View>
@@ -86,10 +100,16 @@ class LoginScreen extends React.Component {
               style={styles.textInput}
               onChangeText={password => this.setState({ password })}
               value={this.state.password}
+              autoCorrect={false}
             />
           </View>
           <View>
-            <Button title="Login" onPress={this.handleLogin} />
+            <TouchableHighlight
+              style={styles.button}
+              onPress={() => this.handleLogin()}
+            >
+              <Text style={styles.buttonText}>Login</Text>
+            </TouchableHighlight>
           </View>
         </View>
       </View>
