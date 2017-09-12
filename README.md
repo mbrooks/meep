@@ -1,6 +1,13 @@
-# Comedy Hackathon #
+# Meep Mobile Messenger #
 
-This is the React App for the Comedy Hackathon 
+Other messengers are boring. Meep uses our patent pending text 
+parsing to convert regular boring text into beautiful awesome
+memes!
+
+## Requirements ##
+
+* Meep is built on top of node and react-native
+* Probably MacOS, because it runs on my machine!
 
 ## Install ##
 
@@ -9,3 +16,7 @@ This is the React App for the Comedy Hackathon
 ## Start the dev env ##
 
 	npm start
+	
+### Totally Satire ###
+Meep Mobile Messenger was created for the Comedy Hackathon held in
+Huntsville, AL on November 10th, 2017. Yes, it actually does work!
