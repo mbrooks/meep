@@ -17,6 +17,7 @@ memes!
 
 	npm start
 	
-### Totally Satire ###
+## Totally Satire ##
 Meep Mobile Messenger was created for the Comedy Hackathon held in
-Huntsville, AL on November 10th, 2017. Yes, it actually does work!
+Huntsville, AL on September 10th, 2017 at Stand Up Live. Yes, it 
+actually does work!
