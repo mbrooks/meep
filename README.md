@@ -23,6 +23,14 @@ Huntsville, AL on September 10th, 2017 at Stand Up Live. Yes, it
 actually does work!
 
 ### Team ###
-Developers: Matt Brooks and Christopher Obergfell
-Graphics UI/UX: George White
-Content and Memes: Brandon Ijames, Danielle Hart, and Christopher Obergfell
+Developers: 
+* Matt Brooks
+* Christopher Obergfell
+
+Graphics UI/UX: 
+* George White
+
+Content and Memes: 
+* Brandon Ijames
+* Danielle Hart
+* Christopher Obergfell
