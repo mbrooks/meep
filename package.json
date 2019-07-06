@@ -10,7 +10,7 @@
     "eslint-plugin-react": "^7.3.0",
     "jest-expo": "~20.0.0",
     "react-native-scripts": "2.0.1",
-    "react-test-renderer": "16.0.0-alpha.12"
+    "react-test-renderer": "16.8.6"
   },
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
@@ -27,7 +27,7 @@
   "dependencies": {
     "expo": "^20.0.0",
     "pusher-js": "^4.1.0",
-    "react": "16.0.0-alpha.12",
+    "react": "16.8.6",
     "react-native": "^0.47.0",
     "react-native-gifted-chat": "^0.2.7",
     "react-navigation": "^1.0.0-beta.11"
