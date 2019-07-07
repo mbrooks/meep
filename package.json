@@ -6,7 +6,7 @@
     "eslint": "4.19.1",
     "eslint-config-airbnb": "17.1.1",
     "eslint-plugin-import": "2.18.0",
-    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.14.2",
     "jest-expo": "20.0.0",
     "react-native-scripts": "2.0.1",
