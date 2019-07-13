@@ -30,6 +30,6 @@
     "react": "16.8.6",
     "react-native": "0.60.2",
     "react-native-gifted-chat": "0.9.11",
-    "react-navigation": "3.11.0"
+    "react-navigation": "3.11.1"
   }
 }
