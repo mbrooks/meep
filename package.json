@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "expo": "34.0.4",
-    "pusher-js": "5.0.0",
+    "pusher-js": "5.1.1",
     "react": "16.9.0",
     "react-native": "0.60.5",
     "react-native-gifted-chat": "0.9.11",
