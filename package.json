@@ -8,7 +8,7 @@
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-jsx-a11y": "6.2.3",
     "eslint-plugin-react": "7.14.3",
-    "jest-expo": "34.0.1",
+    "jest-expo": "51.0.4",
     "react-native-scripts": "2.0.1",
     "react-test-renderer": "16.9.0"
   },
@@ -25,7 +25,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
-    "expo": "34.0.4",
+    "expo": "51.0.38",
     "pusher-js": "5.0.0",
     "react": "16.9.0",
     "react-native": "0.60.5",
